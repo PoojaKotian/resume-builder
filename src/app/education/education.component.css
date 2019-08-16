@@ -1,3 +1,5 @@
+/* setting the ratio for screen display of education feilds of various qualification degree */
+
 .row{
     margin-left: 10px;
 }
@@ -12,17 +14,26 @@
     width: 80%;
 }
 
+/*setting up the page container*/
 #page-container{
     position: relative;
     min-height: 76.8vh;
 }
 
+/*padding for the screen function*/
 #content-wrap{
     padding-bottom: 2.5rem;
 }
 
+/*background image display settings function */
 .image{
     height:46.86em; background-size:cover; width:auto;
     background-image:url('http://www.sclance.com/backgrounds/professional-website-background/professional-website-background_1821691.jpg');
     background-position:50% 50%;
   }
+
+  /*required statement color setting function*/
+nonsense[required] + label:after{
+    content: '*';
+    color: 'red';
+}

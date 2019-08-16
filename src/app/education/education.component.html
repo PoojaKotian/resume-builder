@@ -1,128 +1,129 @@
-<div class="image">
+{% comment %} background image for the page {% endcomment %}
+<div class="image"> 
+  {% comment %}headers that allows user to access other components {% endcomment %}
 <app-header></app-header>
 <h1>Education Details</h1>
 <hr>
+{% comment %} container for the page display {% endcomment %}
 <div id="page-container">
-<div id="content-wrap">
-<div class="container">
-<div class="row">
-  <div class="col-xs-12">
-    <h5>*Required</h5>
-      <h3>Schooling Details*</h3>
-    <form [formGroup]="educationForm"(ngSubmit)="onNext()">
+  <div id="content-wrap">
+  {% comment %} container for SSLC education details {% endcomment %}
+    <div class="container">
       <div class="row">
-          <div class="col-sm-3 form-group">
-             
-                <label for="schoolName" >Institution Name  </label>
-                <input 
-                type="text" 
-                id= "schoolName"
-                class="form-control"
-                formControlName="schoolName">
-            </div>
-            <div class="col-sm-2 form-group">
-                <label for="percentage">Percentage  </label>
-                <input 
-                type="percentage" 
-                id="percentage"
-                class="form-control"
-                formControlName="percentage">
-              </div>
-              <div class="col-sm-2 form-group">
-                  <label for="fromYear">From Year </label>
-                  <input 
-                  type="date"
-                  id="fromYear"
-                  class="form-control" 
-                  formControlName="fromYear">
-                </div>
-                <div class="col-sm-2 form-group">
-                  <label for ="toYear"> To Year </label>
-                  <input 
-                  type="date" 
-                  id = "toYear"
-                  class="form-control"
-                  formControlName="toYear">
-          </div>
-          <div class="row " >
-              <div class="col-xs-12">
-              <button class="btn btn-primary" type="submit">Save</button>
-               &nbsp;
-              <button class ="btn btn-primary" type="reset">reset</button>
-              </div>
+        <div class="col-xs-12">
+          <h5 style="color: red">*Required</h5>
+            <h3 id = "nonsense">Schooling Details*</h3>
+              <form [formGroup]="educationForm"(ngSubmit)="onNext()">
+                <div class="row">
+                    <div class="col-sm-3 form-group">
+                        <label for="schoolName" >Institution Name  </label>
+                          <input 
+                          type="text" 
+                          id= "schoolName"
+                          class="form-control"
+                          formControlName="schoolName">
+                      </div>
+                      <div class="col-sm-2 form-group">
+                          <label for="percentage">Percentage  </label>
+                          <input 
+                          type="percentage" 
+                          id="percentage"
+                          class="form-control"
+                          formControlName="percentage">
+                        </div>
+                        <div class="col-sm-2 form-group">
+                            <label for="fromYear">From Year </label>
+                            <input 
+                            type="date"
+                            id="fromYear"
+                            class="form-control" 
+                            formControlName="fromYear">
+                        </div>
+                          <div class="col-sm-2 form-group">
+                            <label for ="toYear"> To Year </label>
+                            <input 
+                            type="date" 
+                            id = "toYear"
+                            class="form-control"
+                            formControlName="toYear">
+                          </div>
+                          <div class="row " >
+                              <div class="col-xs-12">
+                                <button class="btn btn-primary" type="submit">Save</button>
+                                &nbsp;
+                                <button class ="btn btn-primary" type="reset">reset</button>
+                            </div>
+                          </div>
+                      </div>
+                  </form>
           </div>
       </div>
-    </form>
-  </div>
-</div>
-
-
-<div class="row">
-    <div class="col-xs-12">
-        <h3>PUC / +2 Details</h3>
-      <form >
-        <div class="row">
-            <div class="col-sm-3 form-group">
-                
-                  <label for="colName" >Institution Name  </label>
-                  <input type="text" 
-                  id= "colName"
-                  class="form-control"
-                  colName="colName">
-              </div>
-              <div class="col-sm-2 form-group">
-                  <label for="percentage2">Percentage  </label>
-                  <input type="percentage" 
-                  id="percentage2"
-                  class="form-control"
-                  percentage2="percentage2">
-                </div>
-                <div class="col-sm-2 form-group">
-                    <label for="fromYear2">From Year </label>
-                    <input type="date"
-                    id="fromYear2"
-                    class="form-control" 
-                    fromYear2="fromYear2">
-                  </div>
-                  <div class="col-sm-2 form-group">
-                    <label for ="toYear2"> To Year </label>
-                    <input type="date" 
-                    id = "toYear2"
-                    class="form-control"
-                    toYear2="toYear2">
-            </div>
-            <div class="row " >
-                <div class="col-xs-12">
-                <button class="btn btn-primary" type="submit">Save</button>
-                 &nbsp;
-                <button class ="btn btn-primary" type="reset">reset</button>
-                </div>
-            </div>
-        </div>
-      </form>
-    </div>
-  </div>
-  
-  <br>
-      <app-education-feild></app-education-feild>
-
-     
-
-  <div class="container">
-    <footer>
-      <div class="bottom">
+      {% comment %} container for PU or +2 details form {% endcomment %}
       <div class="row">
           <div class="col-xs-12">
-              <div id="hash">
-              <button class="btn btn-success" (click)="onPrev()">Back</button>
-              <button   class="btn btn-success" [disabled]="!educationForm.valid" (click)="onNext()">Next</button>
+              <h3>PUC / +2 Details</h3>
+              <form >
+                <div class="row">
+                    <div class="col-sm-3 form-group">
+                        
+                          <label for="colName" >Institution Name  </label>
+                          <input type="text" 
+                          id= "colName"
+                          class="form-control"
+                          colName="colName">
+                      </div>
+                      <div class="col-sm-2 form-group">
+                          <label for="percentage2">Percentage  </label>
+                          <input type="percentage" 
+                          id="percentage2"
+                          class="form-control"
+                          percentage2="percentage2">
+                        </div>
+                        <div class="col-sm-2 form-group">
+                            <label for="fromYear2">From Year </label>
+                            <input type="date"
+                            id="fromYear2"
+                            class="form-control" 
+                            fromYear2="fromYear2">
+                          </div>
+                          <div class="col-sm-2 form-group">
+                            <label for ="toYear2"> To Year </label>
+                            <input type="date" 
+                            id = "toYear2"
+                            class="form-control"
+                            toYear2="toYear2">
+                    </div>
+                    <div class="row " >
+                        <div class="col-xs-12">
+                        <button class="btn btn-primary" type="submit">Save</button>
+                        &nbsp;
+                        <button class ="btn btn-primary" type="reset">reset</button>
+                        </div>
+                    </div>
+                </div>
+              </form>
           </div>
-          </div>
-      </div>
-  </div>
-</footer>
-  </div>
-
-</div>  
+        </div>
+  
+        <br>
+        {% comment %} education feild component {% endcomment %}
+        <app-education-feild></app-education-feild>
+         <br>   
+        {% comment %} container for footer components {% endcomment %}
+        <div class="container">
+          <footer>
+            <div class="bottom">
+              <div class="row">
+                <div class="col-xs-12">
+                    <div id="hash">
+                      <button class="btn btn-success" (click)="onPrev()">Back</button>
+                      <button   class="btn btn-success" [disabled]="!educationForm.valid" (click)="onNext()">Next</button>
+                    </div>
+                 </div>
+              </div>
+            </div>
+           </footer>
+         </div>
+    </div>  
 </div>
     
